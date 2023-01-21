@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nipio:
+    image: nipio-local:latest
+    build: .
+    environment:
+      - NIPIO_DOMAIN=nip.io
+    ports:
+      - "127.0.0.2:53:53/udp"
+    restart: always
